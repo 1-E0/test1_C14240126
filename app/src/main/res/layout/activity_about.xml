@@ -65,7 +65,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:contentDescription="App Logo"
-                    android:src="@drawable/IconAPK" />
+                    android:src="@drawable/icon_apk" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:contentDescription="Email"
-                        android:src="@drawable/ic_emailBlack" />
+                        android:src="@drawable/ic_email_black" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -197,7 +197,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:contentDescription="Phone"
-                        android:src="@drawable/ic_phoneBlack" />
+                        android:src="@drawable/ic_phone_black" />
 
                     <TextView
                         android:layout_width="0dp"

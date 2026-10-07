@@ -25,5 +25,9 @@ class AboutActivity : AppCompatActivity() {
         val _tvDevNrp = findViewById<TextView>(R.id.tvDevNrp)
         val _tvDevEmail = findViewById<TextView>(R.id.tvDevEmail)
         val _tvDevPhone = findViewById<TextView>(R.id.tvDevPhone)
+
+        _btnBack.setOnClickListener {
+            finish()
+        }
     }
 }

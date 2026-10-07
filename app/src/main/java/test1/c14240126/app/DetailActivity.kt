@@ -36,5 +36,9 @@ class DetailActivity : AppCompatActivity() {
         val _tvSpeakerRole = findViewById<TextView>(R.id.tvSpeakerRole)
         val _btnAddToCalendar = findViewById<LinearLayout>(R.id.btnAddToCalendar)
         val _btnCallPanitia = findViewById<LinearLayout>(R.id.btnCallPanitia)
+
+        _btnBack.setOnClickListener {
+            finish()
+        }
     }
 }
