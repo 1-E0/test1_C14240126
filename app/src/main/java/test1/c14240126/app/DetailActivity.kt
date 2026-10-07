@@ -89,7 +89,7 @@ class DetailActivity : AppCompatActivity() {
             startActivity(calIntent)
         }
 
-
+            
         _btnCallPanitia.setOnClickListener {
             val dialIntent = Intent(Intent.ACTION_DIAL).apply {
                 data = Uri.parse("tel:$phone")
