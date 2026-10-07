@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val _cardWorkshop = findViewById<LinearLayout>(R.id.cardWorkshop)
         val _cardEvent = findViewById<LinearLayout>(R.id.cardEvent)
         val _btnAbout = findViewById<LinearLayout>(R.id.btnAbout)
+        val _btnContactDev = findViewById<LinearLayout>(R.id.btnContactDev)
 
         _cardSeminar.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java).apply {
@@ -41,39 +42,21 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        _cardWorkshop.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java).apply {
-                putExtra(DetailActivity.EXTRA_TITLE, "Workshop UI/UX Design")
-                putExtra(DetailActivity.EXTRA_CATEGORY, "WORKSHOP")
-                putExtra(DetailActivity.EXTRA_SUBTITLE, "\"Dari Ide Menjadi Desain yang Menarik\"")
-                putExtra(DetailActivity.EXTRA_DATE, "25 Oktober 2026")
-                putExtra(DetailActivity.EXTRA_TIME, "13.00 - 16.00 WIB")
-                putExtra(DetailActivity.EXTRA_LOCATION, "Lab. Komputer Lt. 3")
-                putExtra(DetailActivity.EXTRA_DESC, "Workshop UI/UX Design")
-                putExtra(DetailActivity.EXTRA_IMAGE, R.drawable.workshop)
-                putExtra(DetailActivity.EXTRA_PHONE, "082198765432")
-            }
-            startActivity(intent)
-        }
 
-        _cardEvent.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java).apply {
-                putExtra(DetailActivity.EXTRA_TITLE, "Campus Fair 2026")
-                putExtra(DetailActivity.EXTRA_CATEGORY, "EVENT")
-                putExtra(DetailActivity.EXTRA_SUBTITLE, "\"Temukan Peluang untuk Masa Depanmu\"")
-                putExtra(DetailActivity.EXTRA_DATE, "28 Oktober 2026")
-                putExtra(DetailActivity.EXTRA_TIME, "08.00 - 15.00 WIB")
-                putExtra(DetailActivity.EXTRA_LOCATION, "Lapangan Kampus XYZ")
-                putExtra(DetailActivity.EXTRA_DESC, "Campus Fair 2026")
-                putExtra(DetailActivity.EXTRA_IMAGE, R.drawable.event)
-                putExtra(DetailActivity.EXTRA_PHONE, "083812345678")
-            }
-            startActivity(intent)
-        }
 
         _btnAbout.setOnClickListener {
             val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
+        }
+
+
+        _btnContactDev.setOnClickListener {
+            val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto:c14240126@john.petra.ac.id")
+                putExtra(Intent.EXTRA_SUBJECT, "[Campus Activity] ask")
+                putExtra(Intent.EXTRA_TEXT, "Saya ingin bertanya tentang ……..")
+            }
+            startActivity(emailIntent)
         }
     }
 }
