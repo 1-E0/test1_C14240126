@@ -28,31 +28,28 @@ class MainActivity : AppCompatActivity() {
         val _btnContactDev = findViewById<LinearLayout>(R.id.btnContactDev)
 
         _cardSeminar.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java).apply {
-                putExtra(DetailActivity.EXTRA_TITLE, "Seminar Teknologi 2026")
-                putExtra(DetailActivity.EXTRA_CATEGORY, "SEMINAR")
-                putExtra(DetailActivity.EXTRA_SUBTITLE, "\"Membangun Aplikasi Android Modern\"")
-                putExtra(DetailActivity.EXTRA_DATE, "20 Oktober 2026")
-                putExtra(DetailActivity.EXTRA_TIME, "09.00 - 12.00 WIB")
-                putExtra(DetailActivity.EXTRA_LOCATION, "Auditorium Kampus XYZ")
-                putExtra(DetailActivity.EXTRA_DESC, "Seminar Teknologi 2026")
-                putExtra(DetailActivity.EXTRA_IMAGE, R.drawable.seminar)
-                putExtra(DetailActivity.EXTRA_PHONE, "081234567890")
-            }
+            val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
         }
 
+        _cardWorkshop.setOnClickListener {
+            val intent = Intent(this, DetailWorkshopActivity::class.java)
+            startActivity(intent)
+        }
 
+        _cardEvent.setOnClickListener {
+            val intent = Intent(this, DetailEventActivity::class.java)
+            startActivity(intent)
+        }
 
         _btnAbout.setOnClickListener {
             val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
 
-
         _btnContactDev.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:c14240126@john.petra.ac.id")
+                data = Uri.parse("mailto:edward@student.petra.ac.id")
                 putExtra(Intent.EXTRA_SUBJECT, "[Campus Activity] ask")
                 putExtra(Intent.EXTRA_TEXT, "Saya ingin bertanya tentang ……..")
             }
